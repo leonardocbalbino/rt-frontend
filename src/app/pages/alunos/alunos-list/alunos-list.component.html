@@ -8,6 +8,7 @@
                 <th style="width:25%">Email</th>
                 <th style="width:25%">Data Nascimento</th>
                 <th style="width:25%">Plano</th>
+                <th style="width:25%">Vencimento</th>
                 <th style="width:25%">Valor Plano</th>
                 <th style="width:25%">Valor Previsto</th>
             </tr>
@@ -18,6 +19,7 @@
                 <td>{{listagemAlunos.email}}</td>
                 <td>{{listagemAlunos.data_nascimento | date}}</td>
                 <td>{{listagemAlunos.planos[0].nome}}</td>
+                <td>{{listagemAlunos.vencimento}}</td>
                 <td>{{listagemAlunos.planos[0].valor | currency: 'BRL'}}</td>
                 <td>{{listagemAlunos.valor_previsto | currency: 'BRL'}}</td>
             </tr>

@@ -41,7 +41,7 @@ export class AppMenuComponent implements OnInit {
             },
 
             {
-                label: 'Financeiro',
+                label: 'Financeiro do aluno',
                 items: [
                     {
                         label: 'Financeiro', icon: 'pi pi-fw pi-home', routerLink: ['/'],
@@ -52,45 +52,39 @@ export class AppMenuComponent implements OnInit {
                     }
                 ]
             },
-            {
-                label: 'Eventos',
-                items: [
-                    {
-                        label: 'Menu', icon: 'pi pi-fw pi-home', routerLink: ['/']
-                    },
-                ]
-            },
-            {
-                label: 'Treino',
-                items: [
-                    {
-                        label: 'Menu', icon: 'pi pi-fw pi-home', routerLink: ['/']
-                    },
-                ]
-            },
-            {
-                label: 'Avaliações',
-                items: [
-                    {
-                        label: 'Menu', icon: 'pi pi-fw pi-home', routerLink: ['/']
-                    },
-                ]
-            },
+            // {
+            //     label: 'Eventos',
+            //     items: [
+            //         {
+            //             label: 'Menu', icon: 'pi pi-fw pi-home', routerLink: ['/']
+            //         },
+            //     ]
+            // },
+            // {
+            //     label: 'Treino',
+            //     items: [
+            //         {
+            //             label: 'Menu', icon: 'pi pi-fw pi-home', routerLink: ['/']
+            //         },
+            //     ]
+            // },
+            // {
+            //     label: 'Avaliações',
+            //     items: [
+            //         {
+            //             label: 'Menu', icon: 'pi pi-fw pi-home', routerLink: ['/']
+            //         },
+            //     ]
+            // },
 
             {
-                label: 'Parceiros',
+                label: 'Família RT',
                 items: [
                     {
-                        label: 'Menu', icon: 'pi pi-fw pi-home', routerLink: ['/']
+                        label: 'Loja RT', icon: 'pi pi-fw pi-home', routerLink: ['/'],
                     },
-                ]
-            },
-
-            {
-                label: 'Vendas',
-                items: [
                     {
-                        label: 'Menu', icon: 'pi pi-fw pi-home', routerLink: ['/']
+                        label: 'Parceiros', icon: 'pi pi-fw pi-home', routerLink: ['/']
                     },
                 ]
             },

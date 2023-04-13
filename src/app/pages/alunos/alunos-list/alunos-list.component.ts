@@ -28,7 +28,7 @@ export class AlunosListComponent {
 
     alunos(){
         this.alunoService.alunos().subscribe((alunos) => {
-            this.listagemAlunos = alunos;
+            this.listagemAlunos = alunos.alunos;
             console.log(this.listagemAlunos);
         });
     }

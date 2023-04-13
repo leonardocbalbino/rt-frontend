@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { Subscription } from 'rxjs';
+import { AlunoService } from 'src/app/api/aluno.service';
 
 @Component({
     templateUrl: './dashboard.component.html',
@@ -15,10 +16,17 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     subscription!: Subscription;
 
-    constructor() {}
+    receita: any
+
+    totalAlunos: any
+
+    constructor(private alunoService: AlunoService) {}
 
     ngOnInit() {
-
+        this.alunoService.alunos().subscribe((alunos) => {
+            this.totalAlunos = alunos.total_alunos.total_alunos
+            this.receita = alunos.valor_previsto.valor
+        });
     }
 
     initChart() {

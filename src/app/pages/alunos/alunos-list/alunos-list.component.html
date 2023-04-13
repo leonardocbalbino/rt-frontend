@@ -1,14 +1,15 @@
 <div class="card">
     <h5>Lista de Alunos</h5>
     <p-table [value]="listagemAlunos" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" [tableStyle]="{'min-width': '50rem'}"
-        currentPageReportTemplate="Exibindo {first} a {last} de {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
+        currentPageReportTemplate="Exibindo {first} a {last} de {totalRecords} registros" [rowsPerPageOptions]="[10,25,50]">
         <ng-template pTemplate="header">
             <tr>
                 <th style="width:25%">Nome</th>
                 <th style="width:25%">Email</th>
                 <th style="width:25%">Data Nascimento</th>
-                <th style="width:25%">Categoria</th>
                 <th style="width:25%">Plano</th>
+                <th style="width:25%">Valor Plano</th>
+                <th style="width:25%">Valor Previsto</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-listagemAlunos>
@@ -16,8 +17,9 @@
                 <td>{{listagemAlunos.nome}}</td>
                 <td>{{listagemAlunos.email}}</td>
                 <td>{{listagemAlunos.data_nascimento | date}}</td>
-                <td>{{listagemAlunos.nome}}</td>
-                <td>{{listagemAlunos.nome}}</td>
+                <td>{{listagemAlunos.planos[0].nome}}</td>
+                <td>{{listagemAlunos.planos[0].valor | currency: 'BRL'}}</td>
+                <td>{{listagemAlunos.valor_previsto | currency: 'BRL'}}</td>
             </tr>
         </ng-template>
 

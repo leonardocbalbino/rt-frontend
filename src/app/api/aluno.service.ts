@@ -19,8 +19,6 @@ export class AlunoService {
 
   alunos(): Observable<any> {
     const endpoint = `${environment.api}`;
-    console.log(endpoint)
-    console.log(`${endpoint}/alunos`)
     return this.http.get<any>(`${endpoint}/alunos`);
   }
 }

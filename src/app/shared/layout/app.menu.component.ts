@@ -28,7 +28,7 @@ export class AppMenuComponent implements OnInit {
                         // ]
                     },
                     {
-                        label: 'Financeiro', icon: 'pi pi-fw pi-home', routerLink: ['/'],
+                        label: 'Financeiro', icon: 'pi pi-fw pi-home', routerLink: ['/financeiro'],
                         // items: [
                         //     { label: 'Pagamentos', icon: 'pi pi-fw pi-bookmark' },
                         //     { label: 'Custo', icon: 'pi pi-fw pi-bookmark' },

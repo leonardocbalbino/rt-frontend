@@ -16,6 +16,10 @@ export class AlunosListComponent {
 
     rows = 10;
 
+    receita: any
+
+    totalAlunos: any
+
     constructor(private alunoService: AlunoService) {
         this.customers = []
      }
@@ -23,6 +27,7 @@ export class AlunosListComponent {
 
     ngOnInit() {
         this.alunos()
+        this.dashbord()
     }
 
 
@@ -30,6 +35,13 @@ export class AlunosListComponent {
         this.alunoService.alunos().subscribe((alunos) => {
             this.listagemAlunos = alunos.alunos;
             console.log(this.listagemAlunos);
+        });
+    }
+
+    dashbord(){
+        this.alunoService.alunos().subscribe((alunos) => {
+            this.totalAlunos = alunos.total_alunos.total_alunos
+            this.receita = alunos.valor_previsto.valor
         });
     }
 

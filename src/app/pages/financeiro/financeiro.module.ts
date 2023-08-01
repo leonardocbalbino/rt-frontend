@@ -7,8 +7,8 @@ import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { StyleClassModule } from 'primeng/styleclass';
 import { PanelMenuModule } from 'primeng/panelmenu';
-import { AlunosRoutingModule } from './alunos-routing.module';
-import { AlunosListComponent } from './alunos-list/alunos-list.component';
+import { FinanceiroComponent } from './financeiro/financeiro.component';
+import { FinanceiroRoutingModule } from './financeiro-routing.module';
 import { ToolbarModule } from 'primeng/toolbar';
 
 @NgModule({
@@ -22,10 +22,10 @@ import { ToolbarModule } from 'primeng/toolbar';
         PanelMenuModule,
         ButtonModule,
         ToolbarModule,
-        AlunosRoutingModule
+        FinanceiroRoutingModule
     ],
     declarations: [
-    AlunosListComponent
+    FinanceiroComponent
   ]
 })
-export class AlunosModule { }
+export class FinanceiroModule { }

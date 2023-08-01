@@ -1,5 +1,39 @@
+<div class="grid">
+    <div class="col-12 lg:col-6 xl:col-6">
+        <div class="card mb-0">
+            <div class="flex justify-content-between mb-3">
+                <div>
+                    <span class="block text-500 font-medium mb-3">Quantidade de Alunos</span>
+                    <div class="text-900 font-medium text-xl"> {{ totalAlunos }} Alunos</div>
+                </div>
+                <div class="flex align-items-center justify-content-center bg-blue-100 border-round" [ngStyle]="{width: '2.5rem', height: '2.5rem'}">
+                    <i class="pi pi-user text-blue-500 text-xl"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 lg:col-6 xl:col-6">
+        <div class="card mb-0">
+            <div class="flex justify-content-between mb-3">
+                <div>
+                    <span class="block text-500 font-medium mb-3">Valor Previsto (Mensalidades)</span>
+                    <div class="text-900 font-medium text-xl"> {{ receita | currency: 'BRL' }}</div>
+                </div>
+                <div class="flex align-items-center justify-content-center bg-green-100 border-round" [ngStyle]="{width: '2.5rem', height: '2.5rem'}">
+                    <i class="pi pi-wallet text-green-500 text-xl"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="card">
     <h5>Lista de Alunos</h5>
+
+    <div class="field col-12 flex justify-content-end">
+        <button pButton pRipple label="Adicionar Aluno" icon="pi pi-plus" class="mr-2" style="background-color: #6ccaed; color: white; border-color: #6ccaed;"></button>
+    </div>
+
     <p-table [value]="listagemAlunos" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" [tableStyle]="{'min-width': '50rem'}"
         currentPageReportTemplate="Exibindo {first} a {last} de {totalRecords} registros" [rowsPerPageOptions]="[10,25,50]">
         <ng-template pTemplate="header">
@@ -11,6 +45,7 @@
                 <th style="width:25%">Vencimento</th>
                 <th style="width:25%">Valor Plano</th>
                 <th style="width:25%">Valor Previsto</th>
+                <th style="width:25%">Ação</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-listagemAlunos>
@@ -22,6 +57,9 @@
                 <td>{{listagemAlunos.vencimento}}</td>
                 <td>{{listagemAlunos.planos[0].valor | currency: 'BRL'}}</td>
                 <td>{{listagemAlunos.valor_previsto | currency: 'BRL'}}</td>
+                <td>
+                    <button pButton pRipple icon="pi pi-pencil" style="background-color: #6ccaed; color: white; border-color: #6ccaed;"></button>
+                </td>
             </tr>
         </ng-template>
 

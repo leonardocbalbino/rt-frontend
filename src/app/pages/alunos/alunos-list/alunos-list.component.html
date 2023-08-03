@@ -59,7 +59,7 @@
                 <td>{{listagemAlunos.valor_previsto | currency: 'BRL'}}</td>
                 <td>
                     <button pButton pRipple icon="pi pi-pencil" pTooltip="Editar" class="p-button-rounded p-button-text p-button-danger" (click)="goToEdit()"></button>
-                    <button pButton pRipple icon="pi pi-eye" pTooltip="Visualizar" class="p-button-rounded p-button-text p-button-danger" (click)="goToView()"></button>
+                    <button pButton pRipple icon="pi pi-eye" pTooltip="Visualizar" class="p-button-rounded p-button-text p-button-danger" (click)="goToView(listagemAlunos)"></button>
                 </td>
             </tr>
         </ng-template>

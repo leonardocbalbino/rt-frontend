@@ -56,8 +56,8 @@ export class AlunosListComponent {
         this.router.navigate([`edicao-aluno`]);
     }
 
-    goToView() {
-        this.router.navigate([`visualizacao-aluno`]);
+    goToView(item: any) {
+        this.router.navigate([`visualizacao-aluno`], { state: item });
     }
 
     // next() {

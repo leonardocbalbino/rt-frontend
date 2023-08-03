@@ -1,1 +1,73 @@
-<p>alunos-view works!</p>
+<div class="card">
+    <h5>Dados do Aluno Fulano de Tal</h5>
+
+    <form class="formgrid grid">
+        <div class="field col-6">
+            <label htmlFor="nome">Nome Completo</label>
+            <input name="nome" [ngModel]="nome" pInputText class="w-full" id="username" aria-describedby="username-help" disabled/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="email">Email</label>
+            <input name="email" [ngModel]="email" pInputText class="w-full" id="email" aria-describedby="email-help" disabled/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="cpf">CPF</label>
+            <input name="cpf" [ngModel]="cpf" pInputText class="w-full" id="email" aria-describedby="email-help" disabled/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="rg">RG</label>
+            <input name="rg" [ngModel]="rg" pInputText class="w-full" id="email" aria-describedby="email-help" disabled/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="dataNascimento">Data de Nascimento</label>
+            <input name="dataNascimento" [ngModel]="dataNascimento" pInputText class="w-full" id="username" aria-describedby="username-help" disabled/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="contatoEmegencia">Contato de Emergência</label>
+            <input name="contatoEmergecia" [ngModel]="contatoEmergecia" pInputText class="w-full" id="email" aria-describedby="email-help" disabled/>
+        </div>
+         <div class="field col-3">
+            <label htmlFor="profissao">Profissão</label>
+            <input name="profissao" [ngModel]="profissao" pInputText class="w-full" id="email" aria-describedby="email-help" disabled/>
+        </div>
+         <div class="field col-2" >
+            <label htmlFor="genero">Genêro</label>
+            <input name="genero" [ngModel]="genero" pInputText class="w-full" id="username" aria-describedby="username-help" disabled/>
+        </div>
+        <div class="field col-2">
+            <label htmlFor="estadoCivil">Estado Civil</label>
+            <input name="estadoCivil" [ngModel]="estadoCivil" pInputText class="w-full" id="username" aria-describedby="username-help" disabled/>
+        </div>
+        <div class="field col-2">
+            <label htmlFor="plano">Plano</label>
+            <input name="plano" [ngModel]="plano" pInputText class="w-full" id="username" aria-describedby="username-help" disabled/>
+        </div>
+        <div class="field col-2">
+            <label htmlFor="status">Status</label>
+            <input name="status" [ngModel]="nome" pInputText class="w-full" id="username" aria-describedby="username-help" disabled/>
+        </div>
+        <div class="field col-2">
+            <label htmlFor="vencimento">Vencimento</label>
+            <input name="vencimento" [ngModel]="vencimento" pInputText class="w-full" id="birthdate" aria-describedby="birthdate-help" disabled/>
+        </div>
+        <div class="field col-2">
+            <label htmlFor="valor">Valor p/ Pagamento</label>
+            <input name="valor" [ngModel]="valor" pInputText class="w-full" id="paymentValue" aria-describedby="paymentValue-help" disabled/>
+        </div>
+
+        <div class="field col-6">
+            <label htmlFor="restricoes">Restrições</label>
+            <textarea name="restricoes" [ngModel]="restricoes" class="w-full" rows="5" cols="30" pInputTextarea disabled></textarea>
+        </div>
+        <div class="field col-6">
+            <label htmlFor="observacao">Observações</label>
+            <textarea name="observacoes" [ngModel]="observacoes" class="w-full" rows="5" cols="30" pInputTextarea disabled></textarea>
+        </div>
+
+        <div class="field col-12 flex justify-content-end col-3">
+            <button pButton pRipple label="Voltar" class="mr-2" (click)="toBack()"></button>
+        </div>
+    </form>
+</div>
+
+

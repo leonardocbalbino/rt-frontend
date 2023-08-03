@@ -31,34 +31,35 @@
     <h5>Lista de Alunos</h5>
 
     <div class="field col-12 flex justify-content-end">
-        <button pButton pRipple label="Adicionar Aluno" icon="pi pi-plus" class="mr-2" style="background-color: #6ccaed; color: white; border-color: #6ccaed;"></button>
+        <button pButton pRipple label="Adicionar Aluno" icon="pi pi-plus" style="background-color: #6ccaed; color: white; border-color: #6ccaed;" (click)="goToRegister()"></button>
     </div>
 
     <p-table [value]="listagemAlunos" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" [tableStyle]="{'min-width': '50rem'}"
         currentPageReportTemplate="Exibindo {first} a {last} de {totalRecords} registros" [rowsPerPageOptions]="[10,25,50]">
         <ng-template pTemplate="header">
             <tr>
-                <th style="width:25%">Nome</th>
-                <th style="width:25%">Email</th>
-                <th style="width:25%">Data Nascimento</th>
-                <th style="width:25%">Plano</th>
-                <th style="width:25%">Vencimento</th>
-                <th style="width:25%">Valor Plano</th>
-                <th style="width:25%">Valor Previsto</th>
-                <th style="width:25%">Ação</th>
+                <th style="width:10%">Nome</th>
+                <!-- <th style="width:10%">Email</th> -->
+                <!-- <th style="width:25%">Data Nascimento</th> -->
+                <th style="width:10%">Plano</th>
+                <th style="width:10%">Vencimento</th>
+                <!-- <th style="width:25%">Valor Plano</th> -->
+                <th style="width:10%">Valor Previsto</th>
+                <th style="width:5%">Ação</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-listagemAlunos>
             <tr>
                 <td>{{listagemAlunos.nome}}</td>
-                <td>{{listagemAlunos.email}}</td>
-                <td>{{listagemAlunos.data_nascimento | date}}</td>
-                <td>{{listagemAlunos.planos[0].nome}}</td>
-                <td>{{listagemAlunos.vencimento}}</td>
-                <td>{{listagemAlunos.planos[0].valor | currency: 'BRL'}}</td>
+                <!-- <td>{{listagemAlunos.email}}</td> -->
+                <!-- <td>{{listagemAlunos.data_nascimento | date}}</td> -->
+                <td>{{listagemAlunos.planos[0].nome}} ({{listagemAlunos.planos[0].valor | currency: 'BRL'}})</td>
+                <td>Dia {{listagemAlunos.vencimento}}</td>
+                <!-- <td>{{listagemAlunos.planos[0].valor | currency: 'BRL'}}</td> -->
                 <td>{{listagemAlunos.valor_previsto | currency: 'BRL'}}</td>
                 <td>
-                    <button pButton pRipple icon="pi pi-pencil" style="background-color: #6ccaed; color: white; border-color: #6ccaed;"></button>
+                    <button pButton pRipple icon="pi pi-pencil" pTooltip="Editar" class="p-button-rounded p-button-text p-button-danger" (click)="goToEdit()"></button>
+                    <button pButton pRipple icon="pi pi-eye" pTooltip="Visualizar" class="p-button-rounded p-button-text p-button-danger" (click)="goToView()"></button>
                 </td>
             </tr>
         </ng-template>

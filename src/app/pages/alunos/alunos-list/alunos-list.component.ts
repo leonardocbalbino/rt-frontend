@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AlunoService } from 'src/app/api/aluno.service';
 import { Customer } from './customer';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-alunos-list',
@@ -20,7 +21,10 @@ export class AlunosListComponent {
 
     totalAlunos: any
 
-    constructor(private alunoService: AlunoService) {
+    constructor(
+        private alunoService: AlunoService,
+        private router: Router,
+    ) {
         this.customers = []
      }
 
@@ -29,7 +33,6 @@ export class AlunosListComponent {
         this.alunos()
         this.dashbord()
     }
-
 
     alunos(){
         this.alunoService.alunos().subscribe((alunos) => {
@@ -43,6 +46,18 @@ export class AlunosListComponent {
             this.totalAlunos = alunos.total_alunos.total_alunos
             this.receita = alunos.valor_previsto.valor
         });
+    }
+
+    goToRegister() {
+        this.router.navigate([`cadastro-aluno`]);
+    }
+
+    goToEdit() {
+        this.router.navigate([`edicao-aluno`]);
+    }
+
+    goToView() {
+        this.router.navigate([`visualizacao-aluno`]);
     }
 
     // next() {

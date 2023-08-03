@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import {Observable} from "rxjs";
 import {map, tap} from "rxjs/operators";
@@ -7,7 +7,8 @@ import {environment} from "../../environments/environment";
 @Injectable({
   providedIn: 'root'
 })
-export class AlunoService {
+
+export class PlanoService {
 
     httpOptions = {
         headers: new HttpHeaders({
@@ -15,16 +16,10 @@ export class AlunoService {
         })
       };
 
-  constructor(private http: HttpClient) { }
+ constructor(private http: HttpClient) { }
 
-  alunos(): Observable<any> {
+  planos(): Observable<any> {
     const endpoint = `${environment.api}`;
-    return this.http.get<any>(`${endpoint}/alunos`);
+    return this.http.get<any>(`${endpoint}/planos`);
   }
-
-  cadastrarAluno(dados: any): Observable<any> {
-    const endpoint = `${environment.api}`;
-    return this.http.post<any>(`${endpoint}/alunos`, JSON.stringify(dados), this.httpOptions);
-  }
-
 }

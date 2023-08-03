@@ -1,0 +1,9 @@
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.dropdown-container .p-dropdown {
+    width: 100%;
+}

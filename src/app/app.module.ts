@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +15,7 @@ import { AppLayoutModule } from './shared/layout/app.layout.module';
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },
+        // { provide: LOCALE_ID, useValue: 'pt-BR' }
     ],
     bootstrap: [AppComponent]
 })

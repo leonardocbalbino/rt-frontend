@@ -32,9 +32,6 @@ export class AlunosViewComponent {
     ){}
 
     ngOnInit() {
-        console.log(history.state);
-        console.log(history.state.planos[0].nome);
-
         this.nome = history.state.nome
         this.email = history.state.email
         this.rg = history.state.rg

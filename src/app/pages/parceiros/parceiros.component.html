@@ -1,0 +1,37 @@
+<div class="card">
+    <form [formGroup]="form" class="formgrid grid" (ngSubmit)="alunos()">
+      <div class="field col-9">
+        <label for="nome">Nome</label>
+        <input formControlName="nome" pInputText class="w-full" id="nome" aria-describedby="nome-help" />
+      </div>
+      <div class="field col-3">
+        <label for="cpf">CPF</label>
+        <input formControlName="cpf" pInputText class="w-full" id="cpf" aria-describedby="cpf-help" />
+      </div>
+      <div class="field col-12 flex justify-content-end col-3">
+        <button pButton pRipple label="Limpar Filtro" class="mr-2"></button>
+        <button pButton pRipple label="Buscar Aluno" class="mr-2"></button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card">
+    <p-table [value]="listagemAlunos" [paginator]="true" [rows]="rows" [showCurrentPageReport]="true"
+      [tableStyle]="{'min-width': '50rem'}" currentPageReportTemplate="Exibindo {first} a {last} de {totalRecords} registros"
+      [rowsPerPageOptions]="[10, 25, 50]">
+      <ng-template pTemplate="header">
+        <tr>
+          <th style="width: 10%">Nome</th>
+          <th style="width: 10%">CPF</th>
+          <th style="width: 10%">Data Nascimento</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-listagemAlunos>
+        <tr>
+          <td>{{ listagemAlunos.nome }}</td>
+          <td>{{ listagemAlunos.cpf }}</td>
+          <td>{{ listagemAlunos.data_nascimento | date }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>

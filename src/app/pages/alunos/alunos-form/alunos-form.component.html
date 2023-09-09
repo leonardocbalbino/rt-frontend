@@ -30,16 +30,47 @@
             <label htmlFor="profissao">Profissão</label>
             <input formControlName="profissao" pInputText class="w-full" id="email" aria-describedby="email-help"/>
         </div>
+
+        <div class="field col-3">
+            <label htmlFor="logradouro">Logradouro</label>
+            <input formControlName="logradouro" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="bairro">Bairro</label>
+            <input formControlName="bairro" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="cidade">Cidade</label>
+            <input formControlName="cidade" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="numero_casa">Número</label>
+            <input formControlName="numero_casa" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="cep">CEP</label>
+            <input formControlName="cep" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+
+        <div class="field col-3">
+            <label htmlFor="ddd">DDD</label>
+            <input formControlName="ddd" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="telefone">Telefone</label>
+            <input formControlName="telefone" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+
          <div class="field col-2" >
             <label htmlFor="genero">Genêro</label>
             <div class="dropdown-container">
-                <p-dropdown formControlName="genero" class="w-full" [options]="genero"  optionLabel="label" optionValue="value"></p-dropdown>
+                <p-dropdown formControlName="genero" class="w-full" [options]="genero"  optionLabel="label" optionValue="label"></p-dropdown>
             </div>
         </div>
         <div class="field col-2">
             <label htmlFor="estadoCivil">Estado Civil</label>
             <div class="dropdown-container">
-                <p-dropdown formControlName="estadoCivil" class="w-full" [options]="estadoCivil" optionLabel="label" optionValue="value"></p-dropdown>
+                <p-dropdown formControlName="estadoCivil" class="w-full" [options]="estadoCivil" optionLabel="label" optionValue="label"></p-dropdown>
             </div>
         </div>
         <div class="field col-2">
@@ -70,6 +101,17 @@
         <div class="field col-6">
             <label htmlFor="observacao">Observações</label>
             <textarea formControlName="observacao" class="w-full" rows="5" cols="30" pInputTextarea></textarea>
+        </div>
+
+        <div class="field col-6">
+            <label htmlFor="senha">Senha</label>
+            <input formControlName="senha" pInputText class="w-full" id="senha" aria-describedby="senha-help"/>
+        </div>
+        <div class="field col-2">
+            <label htmlFor="status">Administrador</label>
+            <div class="dropdown-container">
+                <p-dropdown formControlName="admin" class="w-full" [options]="admin" optionLabel="label" optionValue="value"></p-dropdown>
+            </div>
         </div>
 
         <div class="field col-12 flex justify-content-end col-3">

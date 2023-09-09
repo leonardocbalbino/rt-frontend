@@ -27,4 +27,18 @@ export class AlunoService {
     return this.http.post<any>(`${endpoint}/alunos`, JSON.stringify(dados), this.httpOptions);
   }
 
+  buscarAlunos(cpf?: string, nome?: string): Observable<any> {
+    // Defina parâmetros de consulta (CPF e/ou Nome) se eles estiverem definidos
+    let params = new HttpParams();
+    if (cpf) {
+      params = params.set('cpf', cpf);
+    }
+    if (nome) {
+      params = params.set('nome', nome);
+    }
+
+    const endpoint = `${environment.api}`;
+    return this.http.get<any>(`${endpoint}/pesquisar-alunos`, { params });
+  }
+
 }

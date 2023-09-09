@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { AppLayoutModule } from './shared/layout/app.layout.module';
+import { AuthGuard } from './auth/auth.guard';
+import { ParceirosComponent } from './pages/parceiros/parceiros.component';
 
 @NgModule({
     declarations: [
@@ -14,6 +16,7 @@ import { AppLayoutModule } from './shared/layout/app.layout.module';
         AppLayoutModule
     ],
     providers: [
+        AuthGuard,
         { provide: LocationStrategy, useClass: HashLocationStrategy },
         // { provide: LOCALE_ID, useValue: 'pt-BR' }
     ],

@@ -53,7 +53,7 @@
                 <td>{{listagemAlunos.nome}}</td>
                 <!-- <td>{{listagemAlunos.email}}</td> -->
                 <!-- <td>{{listagemAlunos.data_nascimento | date}}</td> -->
-                <td>{{listagemAlunos.planos[0].nome}} ({{listagemAlunos.planos[0].valor | currency: 'BRL'}})</td>
+                <td>{{listagemAlunos?.planos[0]?.nome}} ({{listagemAlunos?.planos[0]?.valor | currency: 'BRL'}})</td>
                 <td>Dia {{listagemAlunos.vencimento}}</td>
                 <!-- <td>{{listagemAlunos.planos[0].valor | currency: 'BRL'}}</td> -->
                 <td>{{listagemAlunos.valor_previsto | currency: 'BRL'}}</td>

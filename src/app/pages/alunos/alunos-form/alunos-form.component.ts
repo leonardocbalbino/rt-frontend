@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, createPlatform } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlunoService } from 'src/app/api/aluno.service';
 import { PlanoService } from 'src/app/api/plano.service';
@@ -12,11 +12,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AlunosFormComponent {
     planos: any = [];
     status: any = [
+        { value: 0, label: '' },
         { value: 1, label: 'Ativo' },
         { value: 2, label: 'Inativo'}
     ];
 
     estadoCivil: any = [
+        { value: 0, label: '' },
         { value: 1, label: 'Solteiro' },
         { value: 2, label: 'Casado' },
         { value: 2, label: 'Viuvo' },
@@ -25,8 +27,15 @@ export class AlunosFormComponent {
     ];
 
     genero: any = [
+        { value: 0, label: '' },
         { value: 1, label: 'Masculino' },
         { value: 2, label: 'Feminino'}
+    ];
+
+    admin: any = [
+        { value: 0, label: '' },
+        { value: 1, label: 'Sim' },
+        { value: 2, label: 'Não'}
     ];
 
     form: FormGroup;
@@ -54,6 +63,15 @@ export class AlunosFormComponent {
             valorPagamento: [''],
             restricoes: [''],
             observacao: [''],
+            admin: [''],
+            senha: [''],
+            telefone: [''],
+            cep: [''],
+            ddd: [''],
+            numero_casa: [''],
+            logradouro: [''],
+            bairro: [''],
+            cidade: [''],
         });
     }
 
@@ -82,13 +100,22 @@ export class AlunosFormComponent {
             contato_emegencia: this.form.value.contatoEmegencia,
             genero: this.form.value.genero,
             profissao: this.form.value.profissao,
-            planos_id: this.form.value.plano,
+            plano_id: this.form.value.plano,
             valor_previsto: this.form.value.valorPagamento,
             vencimento: this.form.value.vencimento,
-            estado_civil_id: this.form.value.estadoCivil,
+            estado_civil: this.form.value.estadoCivil,
             status: this.form.value.status,
             observacoes: this.form.value.observacao,
             restricoes: this.form.value.restricoes,
+            admin_ativado: this.form.value.admin,
+            password: this.form.value.senha,
+            telefone_principal: this.form.value.telefone,
+            cep: this.form.value.cep,
+            ddd: this.form.value.ddd,
+            numero_endereco: this.form.value.numero_casa,
+            logradouro: this.form.value.logradouro,
+            bairro: this.form.value.bairro,
+            cidade: this.form.value.cidade,
         }
         console.log("form", form)
         this.alunoService.cadastrarAluno(form).subscribe((data) => {

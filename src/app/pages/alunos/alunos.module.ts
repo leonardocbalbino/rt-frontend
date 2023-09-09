@@ -18,6 +18,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { DropdownModule } from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
+import { ParceirosComponent } from '../parceiros/parceiros.component';
 
 @NgModule({
     imports: [
@@ -42,7 +43,8 @@ import { CalendarModule } from 'primeng/calendar';
     AlunosListComponent,
     AlunosFormComponent,
     AlunosViewComponent,
-    AlunosEditComponent
+    AlunosEditComponent,
+    ParceirosComponent
   ],
 })
 export class AlunosModule { }

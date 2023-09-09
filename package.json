@@ -10,7 +10,6 @@
     "lint": "ng lint"
   },
   "heroku-postbuild": "ng build --prod",
-
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.1.0",
@@ -23,6 +22,8 @@
     "@angular/platform-browser-dynamic": "^15.1.0",
     "@angular/router": "^15.1.0",
     "chart.js": "^3.3.2",
+    "express": "^4.18.2",
+    "path": "^0.12.7",
     "primeflex": "^3.2.1",
     "primeicons": "6.0.1",
     "primeng": "15.1.1",

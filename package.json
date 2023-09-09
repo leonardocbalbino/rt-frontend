@@ -9,6 +9,10 @@
     "test": "ng test",
     "lint": "ng lint"
   },
+  "engines": {
+    "node": "12.19.0",
+    "npm": "6.14.8"
+ },
   "heroku-postbuild": "ng build --prod",
   "private": true,
   "dependencies": {

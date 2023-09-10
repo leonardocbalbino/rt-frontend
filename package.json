@@ -1,6 +1,9 @@
 {
   "name": "sakai-ng",
   "version": "15.0.0",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

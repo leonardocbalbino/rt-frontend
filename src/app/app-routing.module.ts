@@ -8,6 +8,7 @@ import { AlunosEditComponent } from './pages/alunos/alunos-edit/alunos-edit.comp
 import { AlunosViewComponent } from './pages/alunos/alunos-view/alunos-view.component';
 import { LoginComponent } from './shared/demo/components/auth/login/login.component';
 import { ParceirosComponent } from './pages/parceiros/parceiros.component';
+import { PaymentComponent } from './pages/alunos/payment/payment.component';
 
 @NgModule({
     imports: [
@@ -24,8 +25,10 @@ import { ParceirosComponent } from './pages/parceiros/parceiros.component';
                     {path: 'edicao-aluno', component: AlunosEditComponent },
                     {path: 'visualizacao-aluno', component: AlunosViewComponent },
                     {path: 'parceiro', component: ParceirosComponent },
+                    {path: 'pagamento', component: PaymentComponent },
 
-                    { path: 'financeiro', loadChildren: () => import('./pages/financeiro/financeiro.module').then(m => m.FinanceiroModule) },
+
+                    // { path: 'financeiro', loadChildren: () => import('./pages/financeiro/financeiro.module').then(m => m.FinanceiroModule) },
                 ]
             },
             { path: 'auth', loadChildren: () => import('./shared/demo/components/auth/auth.module').then(m => m.AuthModule) },

@@ -19,6 +19,9 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { DropdownModule } from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
 import { ParceirosComponent } from '../parceiros/parceiros.component';
+import { PaymentComponent } from './payment/payment.component';
+import { TagModule } from 'primeng/tag';
+import { CustomerService } from './payment/service';
 
 @NgModule({
     imports: [
@@ -37,14 +40,17 @@ import { ParceirosComponent } from '../parceiros/parceiros.component';
         InputTextareaModule,
         DropdownModule,
         CalendarModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        TagModule
     ],
     declarations: [
     AlunosListComponent,
     AlunosFormComponent,
     AlunosViewComponent,
     AlunosEditComponent,
-    ParceirosComponent
+    ParceirosComponent,
+    PaymentComponent
   ],
+//   providers: [ CustomerService ]
 })
 export class AlunosModule { }

@@ -120,6 +120,7 @@ export class AlunosFormComponent {
         console.log("form", form)
         this.alunoService.cadastrarAluno(form).subscribe((data) => {
             console.log(data)
+            this.router.navigateByUrl(`/alunos`);
         });
     }
 

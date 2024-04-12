@@ -49,19 +49,29 @@ export class AppMenuComponent implements OnInit {
 
                     ]
                 },
-
+                //remover no futuro
                 {
-                    label: 'Financeiro do aluno',
+                    label: 'Administrativo',
                     items: [
                         {
-                            label: 'Financeiro', icon: 'pi pi-fw pi-home', routerLink: ['/'],
-                            // items: [
-                            //     { label: 'Pagamentos', icon: 'pi pi-fw pi-bookmark' },
-                            //     { label: 'Custo', icon: 'pi pi-fw pi-bookmark' },
-                            // ]
-                        }
+                            label: 'Parceiros', icon: 'pi pi-fw pi-home', routerLink: ['/parceiro']
+                        },
+
                     ]
                 },
+
+                // {
+                //     label: 'Financeiro do aluno',
+                //     items: [
+                //         {
+                //             label: 'Financeiro', icon: 'pi pi-fw pi-home', routerLink: ['/'],
+                //             // items: [
+                //             //     { label: 'Pagamentos', icon: 'pi pi-fw pi-bookmark' },
+                //             //     { label: 'Custo', icon: 'pi pi-fw pi-bookmark' },
+                //             // ]
+                //         }
+                //     ]
+                // },
                 // {
                 //     label: 'Eventos',
                 //     items: [

@@ -1,0 +1,124 @@
+<div class="card">
+    <h5>Cadastro de Alunos</h5>
+
+    <form class="formgrid grid" [formGroup]="form">
+        <div class="field col-6">
+            <label htmlFor="nome">Nome Completo</label>
+            <input formControlName="nome" pInputText class="w-full" id="username" aria-describedby="username-help"/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="email">Email</label>
+            <input formControlName="email" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="cpf">CPF</label>
+            <input formControlName="cpf" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="rg">RG</label>
+            <input formControlName="rg" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="dataNascimento">Data de Nascimento</label>
+            <p-calendar formControlName="dataNascimento" class="w-full" dateFormat="dd/mm/yy" name="datai"  [showIcon]="true"></p-calendar>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="contatoEmegencia">Contato de Emergência</label>
+            <input formControlName="contatoEmegencia" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+         <div class="field col-3">
+            <label htmlFor="profissao">Profissão</label>
+            <input formControlName="profissao" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+
+        <div class="field col-3">
+            <label htmlFor="logradouro">Logradouro</label>
+            <input formControlName="logradouro" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="bairro">Bairro</label>
+            <input formControlName="bairro" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="cidade">Cidade</label>
+            <input formControlName="cidade" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="numero_casa">Número</label>
+            <input formControlName="numero_casa" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="cep">CEP</label>
+            <input formControlName="cep" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+
+        <div class="field col-3">
+            <label htmlFor="ddd">DDD</label>
+            <input formControlName="ddd" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+        <div class="field col-3">
+            <label htmlFor="telefone">Telefone</label>
+            <input formControlName="telefone" pInputText class="w-full" id="email" aria-describedby="email-help"/>
+        </div>
+
+         <div class="field col-2" >
+            <label htmlFor="genero">Genêro</label>
+            <div class="dropdown-container">
+                <p-dropdown formControlName="genero" class="w-full" [options]="genero"  optionLabel="label" optionValue="label"></p-dropdown>
+            </div>
+        </div>
+        <div class="field col-2">
+            <label htmlFor="estadoCivil">Estado Civil</label>
+            <div class="dropdown-container">
+                <p-dropdown formControlName="estadoCivil" class="w-full" [options]="estadoCivil" optionLabel="label" optionValue="label"></p-dropdown>
+            </div>
+        </div>
+        <div class="field col-2">
+            <label htmlFor="plano">Plano</label>
+            <div class="dropdown-container">
+                <p-dropdown formControlName="plano" class="w-full" [options]="planos" optionLabel="nome" optionValue="id"></p-dropdown>
+            </div>
+        </div>
+        <div class="field col-2">
+            <label htmlFor="status">Status</label>
+            <div class="dropdown-container">
+                <p-dropdown formControlName="status" class="w-full" [options]="status" optionLabel="label" optionValue="value"></p-dropdown>
+            </div>
+        </div>
+        <div class="field col-2">
+            <label htmlFor="vencimento">Vencimento</label>
+            <input formControlName="vencimento" pInputText class="w-full" id="birthdate" aria-describedby="birthdate-help" />
+        </div>
+        <div class="field col-2">
+            <label htmlFor="valorPagamento">Valor p/ Pagamento</label>
+            <input formControlName="valorPagamento" pInputText class="w-full" id="paymentValue" aria-describedby="paymentValue-help"/>
+        </div>
+
+        <div class="field col-6">
+            <label htmlFor="restricoes">Restrições</label>
+            <textarea formControlName="restricoes" class="w-full" rows="5" cols="30" pInputTextarea></textarea>
+        </div>
+        <div class="field col-6">
+            <label htmlFor="observacao">Observações</label>
+            <textarea formControlName="observacao" class="w-full" rows="5" cols="30" pInputTextarea></textarea>
+        </div>
+
+        <div class="field col-6">
+            <label htmlFor="senha">Senha</label>
+            <input formControlName="senha" pInputText class="w-full" id="senha" aria-describedby="senha-help"/>
+        </div>
+        <div class="field col-2">
+            <label htmlFor="status">Administrador</label>
+            <div class="dropdown-container">
+                <p-dropdown formControlName="admin" class="w-full" [options]="admin" optionLabel="label" optionValue="value"></p-dropdown>
+            </div>
+        </div>
+
+        <div class="field col-12 flex justify-content-end col-3">
+            <button pButton pRipple label="Voltar" class="mr-2" (click)="toBack()"></button>
+            <button pButton pRipple label="Cadastrar Aluno" icon="pi pi-save" class="p-button-success" (click)="save()"></button>
+        </div>
+    </form>
+</div>
+
+

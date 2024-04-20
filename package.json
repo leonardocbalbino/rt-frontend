@@ -1,14 +1,18 @@
 {
   "name": "sakai-ng",
   "version": "15.0.0",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
-  },
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "deploy:ghdocs": "ng build --configuration=production --output-path docs --base-href /rt-frontend/"
+},
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.1.0",
@@ -21,6 +25,8 @@
     "@angular/platform-browser-dynamic": "^15.1.0",
     "@angular/router": "^15.1.0",
     "chart.js": "^3.3.2",
+    "express": "^4.18.2",
+    "path": "^0.12.7",
     "primeflex": "^3.2.1",
     "primeicons": "6.0.1",
     "primeng": "15.1.1",
@@ -42,6 +48,7 @@
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "@typescript-eslint/parser": "5.37.0",
+    "angular-cli-ghpages": "^2.0.0-beta.2",
     "eslint": "^8.23.1",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",

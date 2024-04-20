@@ -1,0 +1,129 @@
+<div class="grid">
+    <div class="col-12 lg:col-6 xl:col-3">
+        <div class="card mb-0">
+            <div class="flex justify-content-between mb-3">
+                <div>
+                    <span class="block text-500 font-medium mb-3">Valor recebido</span>
+                    <div class="text-900 font-medium text-xl"> 200,00</div>
+                </div>
+                <div class="flex align-items-center justify-content-center bg-green-100 border-round" [ngStyle]="{width: '2.5rem', height: '2.5rem'}">
+                    <i class="pi pi-wallet text-green-500 text-xl"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 lg:col-6 xl:col-3">
+        <div class="card mb-0">
+            <div class="flex justify-content-between mb-3">
+                <div>
+                    <span class="block text-500 font-medium mb-3">Valor a receber</span>
+                    <div class="text-900 font-medium text-xl"> 200,00</div>
+                </div>
+                <div class="flex align-items-center justify-content-center bg-green-100 border-round" [ngStyle]="{width: '2.5rem', height: '2.5rem'}">
+                    <i class="pi pi-wallet text-green-500 text-xl"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 lg:col-6 xl:col-3">
+        <div class="card mb-0">
+            <div class="flex justify-content-between mb-3">
+                <div>
+                    <span class="block text-500 font-medium mb-3">Gastos</span>
+                    <div class="text-900 font-medium text-xl">0,00</div>
+                </div>
+                <div class="flex align-items-center justify-content-center bg-red-100 border-round" [ngStyle]="{width: '2.5rem', height: '2.5rem'}">
+                    <i class="pi pi-money-bill text-red-500 text-xl"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 lg:col-6 xl:col-3">
+        <div class="card mb-0">
+            <div class="flex justify-content-between mb-3">
+                <div>
+                    <span class="block text-500 font-medium mb-3">Total</span>
+                    <div class="text-900 font-medium text-xl">0,00</div>
+                </div>
+                <div class="flex align-items-center justify-content-center bg-green-100 border-round" [ngStyle]="{width: '2.5rem', height: '2.5rem'}">
+                    <i class="pi pi-wallet text-green-500 text-xl"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="my-2">
+        <button pButton pRipple label="Novo Lançamento" icon="pi pi-plus" class="p-button-primary mr-2" ></button>
+    </div>
+
+    <h5>Lançamentos dos Alunos</h5>
+    <p-table  [paginator]="true" [rows]="10" [showCurrentPageReport]="true" [tableStyle]="{'min-width': '50rem'}"
+        currentPageReportTemplate="Exibindo {first} a {last} de {totalRecords} registros" [rowsPerPageOptions]="[10,25,50]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width:25%">Aluno</th>
+                <th style="width:25%">Descrição</th>
+                <th style="width:25%">Data de Vencimento</th>
+                <th style="width:25%">Valor</th>
+                <th style="width:25%">Status</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-listagemAlunos>
+            <tr>
+                <td>{{listagemAlunos.nome}}</td>
+                <td>{{listagemAlunos.email}}</td>
+                <td>{{listagemAlunos.data_nascimento | date}}</td>
+                <td>{{listagemAlunos.planos[0].nome}}</td>
+                <td>{{listagemAlunos.vencimento}}</td>
+            </tr>
+        </ng-template>
+
+    </p-table>
+
+    <!-- <div class="grid" style="margin-top:15px">
+        <div class="col-12 lg:col-6 xl:col-4">
+            <p><b>Valor recebido:</b> R$ 200,00</p>
+        </div>
+        <div class="col-12 lg:col-6 xl:col-4">
+            <p><b>Valor a receber:</b> R$ 200,00</p>
+        </div>
+        <div class="col-12 lg:col-6 xl:col-4">
+            <p><b>Total:</b> R$ 200,00</p>
+        </div>
+    </div> -->
+
+</div>
+
+
+<div class="card">
+    <div class="my-2">
+        <button pButton pRipple label="Novo Lançamento" icon="pi pi-plus" class="p-button-primary mr-2"></button>
+    </div>
+
+    <h5>Gastos</h5>
+    <p-table  [paginator]="true" [rows]="10" [showCurrentPageReport]="true" [tableStyle]="{'min-width': '50rem'}"
+        currentPageReportTemplate="Exibindo {first} a {last} de {totalRecords} registros" [rowsPerPageOptions]="[10,25,50]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width:25%">Descrição</th>
+                <th style="width:25%">Data de Vencimento</th>
+                <th style="width:25%">Valor</th>
+                <th style="width:25%">Status</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-listagemAlunos>
+            <tr>
+                <td>{{listagemAlunos.email}}</td>
+                <td>{{listagemAlunos.data_nascimento | date}}</td>
+                <td>{{listagemAlunos.planos[0].nome}}</td>
+                <td>{{listagemAlunos.vencimento}}</td>
+            </tr>
+        </ng-template>
+
+    </p-table>
+
+</div>

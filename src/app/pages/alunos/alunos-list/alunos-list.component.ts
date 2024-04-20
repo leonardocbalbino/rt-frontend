@@ -60,8 +60,8 @@ export class AlunosListComponent {
         this.router.navigate([`visualizacao-aluno`], { state: item });
     }
 
-    goToPayment() {
-        this.router.navigate([`pagamento`]);
+    goToPayment(item: any) {
+        this.router.navigate([`pagamento`], { state: item });
     }
 
     // next() {

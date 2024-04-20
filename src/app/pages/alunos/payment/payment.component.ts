@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CustomerService } from './service';
 import { Customer } from './customer';
+import { Router } from '@angular/router';
+import { AlunoService } from 'src/app/api/aluno.service';
 
 @Component({
   selector: 'app-payment',
@@ -10,9 +12,26 @@ import { Customer } from './customer';
 export class PaymentComponent {
     customers!: Customer[];
 
-    constructor(private customerService: CustomerService) {}
+    title: any;
+
+    constructor(
+        private customerService: CustomerService,
+        private router: Router,
+        private alunoService: AlunoService,
+    ) {}
 
     ngOnInit() {
+        this.alunoService.getPagamentos(history.state.id).subscribe((res) => {
+            console.log(res)
+        });
+
+
+
+
+
+        console.log(" history.state",  history.state)
+        this.title = history.state.nome
+
         this.customerService.getCustomersMedium().then((data) => {
             this.customers = data;
         });
@@ -47,6 +66,10 @@ export class PaymentComponent {
             default:
                 return 'none';
         }
+    }
+
+    toBack(){
+        this.router.navigateByUrl(`/alunos`);
     }
 
 }

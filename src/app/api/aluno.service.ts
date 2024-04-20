@@ -41,4 +41,9 @@ export class AlunoService {
     return this.http.get<any>(`${endpoint}/pesquisar-alunos`, { params });
   }
 
+  getPagamentos(id: number): Observable<any> {
+    const endpoint = `${environment.api}`;
+    return this.http.get<any>(`${endpoint}/pagamentos/aluno/${id}`);
+  }
+
 }

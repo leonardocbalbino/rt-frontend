@@ -11,9 +11,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy:ghdocs": "ng build --prod --output-path docs --base-href /sakai-ng/",
-    "heroku-postbuild": "ng build --configuration production"
-  },
+    "deploy:ghdocs": "ng build --configuration=production --output-path docs --base-href /rt-frontend/"
+},
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.1.0",
@@ -49,6 +48,7 @@
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "@typescript-eslint/parser": "5.37.0",
+    "angular-cli-ghpages": "^2.0.0-beta.2",
     "eslint": "^8.23.1",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
